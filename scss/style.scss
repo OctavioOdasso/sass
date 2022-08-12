@@ -1,0 +1,48 @@
+/*con un @import adelnate marcamos que trabaje con otra carpeta*/
+/*las carpetas inician siempre con _*/
+@import "head";
+
+/*con el signo $ creamos variables (estilos predeterminados)*/
+$color_principal: rgb(127, 133, 249);
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#head {
+    background-color: $color_principal;
+    height: 7em;
+    border: 1px solid black;
+        .titulo {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        nav {
+            ul {
+                background-color: rgba(45, 40, 40, 0.514);
+                list-style: none;
+                font-size: 1em;
+                padding: 0.5em;
+                display: inline-block;
+                position: relative;
+                a {
+                    font-style: none;
+                }
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    
+                    ul {
+                        display: none;
+                       
+                    }     
+                    &:hover ul {
+                        display: block;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+}

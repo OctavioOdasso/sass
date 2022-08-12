@@ -1,0 +1,31 @@
+/*con un @import adelnate marcamos que trabaje con otra carpeta*/
+/*las carpetas inician siempre con _*/
+/*con el signo $ creamos variables (estilos predeterminados)*/
+* {
+  margin: 0;
+  padding: 0; }
+
+#head {
+  background-color: #7f85f9;
+  height: 7em;
+  border: 1px solid black; }
+  #head .titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px; }
+  #head nav ul {
+    background-color: rgba(45, 40, 40, 0.514);
+    list-style: none;
+    font-size: 1em;
+    padding: 0.5em;
+    display: inline-block;
+    position: relative; }
+    #head nav ul a {
+      font-style: none; }
+    #head nav ul li {
+      list-style: none;
+      display: inline-block; }
+      #head nav ul li ul {
+        display: none; }
+      #head nav ul li:hover ul {
+        display: block;
+        position: absolute; }
