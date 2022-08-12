@@ -3,7 +3,7 @@
 @import "head";
 
 /*con el signo $ creamos variables (estilos predeterminados)*/
-$color_principal: rgb(127, 133, 249);
+$color_principal: rgb(143, 146, 204);
 
 
 * {
@@ -11,38 +11,104 @@ $color_principal: rgb(127, 133, 249);
     padding: 0;
 }
 
-#head {
+header {
     background-color: $color_principal;
     height: 7em;
     border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
         .titulo {
             font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 20px;
+            font-size: 35px;
+            position: relative;
+            text-align: center;
+            display: grid;
+            grid-area: 1fr;
+            margin-top: 1em;
         }
-        nav {
-            ul {
-                background-color: rgba(45, 40, 40, 0.514);
-                list-style: none;
-                font-size: 1em;
-                padding: 0.5em;
+        .menu {
+            display: grid;
+            grid-area: 1fr;       
+            margin-top: 1em;
+            .men {
+                padding: .2em;
+                color: black;
                 display: inline-block;
-                position: relative;
-                a {
-                    font-style: none;
-                }
-                li {
-                    list-style: none;
-                    display: inline-block;
-                    
-                    ul {
-                        display: none;
-                       
-                    }     
-                    &:hover ul {
-                        display: block;
-                        position: absolute;
-                    }
-                }
+            a {
+                text-decoration: none;
+                text-align: center;
+                color: black;
+                display: inline-block;
+                border: 1px solid black;
+                
+            }
+            }                
+            &:hover a {
+                color: white;
             }
         }
+}
+
+.articulo {
+    display: grid;
+    grid-template-areas: 
+    "cnt1 cnt1 cnt1"
+    "cnt2 cnt2 cnt3"
+    "cnt2 cnt2 cnt3";
+    background-color: $color_principal;
+    margin-top: 1em;
+    h3 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 30px;
+        text-align: center;
+        position: relative;
+    }
+    h5 {
+        display: block;
+        font-size: 22px;
+        position: relative;
+        text-align: center;
+    }
+    .container1 {
+        display: grid;
+        grid-area: cnt1;
+        border: solid 1px black;
+    }
+    .container2 {
+        display: grid;
+        grid-area: cnt2;
+    }
+    .container3 {
+        display: grid;
+        grid-area: cnt3;
+    }
+    .container1, .container2, .container3 {
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+    footer {
+        background-color: $color_principal;
+        height: 15em;
+        .container_pie1 {
+            display: block;
+            h2 {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 22px;
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+    }
 }

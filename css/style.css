@@ -5,27 +5,79 @@
   margin: 0;
   padding: 0; }
 
-#head {
-  background-color: #7f85f9;
+header {
+  background-color: #8f92cc;
   height: 7em;
-  border: 1px solid black; }
-  #head .titulo {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  header .titulo {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px; }
-  #head nav ul {
-    background-color: rgba(45, 40, 40, 0.514);
-    list-style: none;
-    font-size: 1em;
-    padding: 0.5em;
-    display: inline-block;
-    position: relative; }
-    #head nav ul a {
-      font-style: none; }
-    #head nav ul li {
-      list-style: none;
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    display: grid;
+    grid-area: 1fr;
+    margin-top: 1em; }
+  header .menu {
+    display: grid;
+    grid-area: 1fr;
+    margin-top: 1em; }
+    header .menu .men {
+      padding: .2em;
+      color: black;
       display: inline-block; }
-      #head nav ul li ul {
-        display: none; }
-      #head nav ul li:hover ul {
+      header .menu .men a {
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        display: inline-block;
+        border: 1px solid black; }
+    header .menu:hover a {
+      color: white; }
+
+.articulo {
+  display: grid;
+  grid-template-areas: "cnt1 cnt1 cnt1" "cnt2 cnt2 cnt3" "cnt2 cnt2 cnt3";
+  background-color: #8f92cc;
+  margin-top: 1em; }
+  .articulo h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+    position: relative; }
+  .articulo h5 {
+    display: block;
+    font-size: 22px;
+    position: relative;
+    text-align: center; }
+  .articulo .container1 {
+    display: grid;
+    grid-area: cnt1;
+    border: solid 1px black; }
+  .articulo .container2 {
+    display: grid;
+    grid-area: cnt2; }
+  .articulo .container3 {
+    display: grid;
+    grid-area: cnt3; }
+  .articulo .container1 img, .articulo .container2 img, .articulo .container3 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .articulo .container1 p, .articulo .container2 p, .articulo .container3 p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    text-align: justify; }
+  .articulo footer {
+    background-color: #8f92cc;
+    height: 15em; }
+    .articulo footer .container_pie1 {
+      display: block; }
+      .articulo footer .container_pie1 h2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 22px; }
+      .articulo footer .container_pie1 img {
         display: block;
-        position: absolute; }
+        margin-left: auto;
+        margin-right: auto; }
